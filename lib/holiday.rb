@@ -64,9 +64,9 @@ def all_supplies_in_holidays(holiday_hash)
   # the list will go here
   supply_list = []
   
-  #convert top level keys (seasons) to strings.
+  #convert top level keys (seasons) to strings and capitalize
   holiday_hash.each do |seasons, holidays| 
-    puts seasons.to_s.capitalize + ":"
+    seasons.to_s.capitalize! + ":"
   
   #convert each holiday to a string   
        holidays.each do |holi,supplies|
@@ -84,7 +84,7 @@ def all_supplies_in_holidays(holiday_hash)
          
         end
         
-        binding.pry
+        #binding.pry
   end
 end
 
