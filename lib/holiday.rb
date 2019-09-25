@@ -66,26 +66,26 @@ def all_supplies_in_holidays(holiday_hash)
   
   #convert top level keys (seasons) to strings.
   holiday_hash.each do |seasons, holidays| 
-     puts seasons.to_s.capitalize + ":"
+    puts seasons.to_s.capitalize + ":"
   
   #convert each holiday to a string   
        holidays.each do |holi,supplies|
         holi_string = holi.to_s
         
-  #capitalize each holiday      
-        holi_array = holi_string.split("_")
-          holi_array.each do |word|
-            word.capitalize!
-          end
+  #capitalize each holiday     
+          holi_array = holi_string.split("_")
+          
+            holi_array.each do |word|
+             word.capitalize!
+            end
+          
+  #and add a colon        
         new_str = holi_array.join(" ") + ":"
-        
-        #binding.pry
          
-      end
+        end
+        supply_list << seasons
+        binding.pry
   end
-
-
-   
 end
 
 
