@@ -83,7 +83,7 @@ def all_supplies_in_holidays(holiday_hash)
         new_str = holi_array.join(" ") + ":"
          
         end
-        supply_list << seasons
+        supply_list << holi_string
         binding.pry
   end
 end
