@@ -61,26 +61,12 @@ all_winter_supplies.flatten
 end
 
 def all_supplies_in_holidays(holiday_hash)
-  # the list will go here
-  supply_list = []
-  
-  #convert top level keys (seasons) to strings and capitalize
-  holiday_hash.each do |seasons, holidays| 
-    seasons.to_s.capitalize! + ":"
-  
-  #convert each holiday to a string   
-       holidays.each do |holi,supplies|
-        holi.to_s.split("_").each do |word|
-             word.capitalize!
-        end
-          
-  #and add a colon        
-        new_str = holi_array.join(" ") + ":"
-         
-        end
-        
-        #binding.pry
-  end
+  holiday_hash.each do |season, holiday|
+     puts "#{season.capitalize}:"
+     holiday.each do |holiday, item|
+       puts "  #{holiday.to_s.split("_").map {|i| i.capitalize}.join(" ")}: #{item.join(", ")}"
+     end
+  end 
 end
 
 
