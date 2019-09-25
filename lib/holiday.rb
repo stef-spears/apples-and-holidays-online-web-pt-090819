@@ -70,14 +70,9 @@ def all_supplies_in_holidays(holiday_hash)
   
   #convert each holiday to a string   
        holidays.each do |holi,supplies|
-        holi_string = holi.to_s.split("_")
-        
-  #capitalize each holiday     
-       
-          
-            holi_array.each do |word|
+        holi.to_s.split("_").each do |word|
              word.capitalize!
-            end
+        end
           
   #and add a colon        
         new_str = holi_array.join(" ") + ":"
