@@ -74,7 +74,7 @@ def all_supplies_in_holidays(holiday_hash)
         holi_array.each do |word|
           word.capitalize!
         end
-        holi_array.join(" ")
+        new_str = holi_array.join(" ")
         
          binding.pry
          
